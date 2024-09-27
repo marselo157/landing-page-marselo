@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, max-scale=1.0">
+    
+    <link rel="stylesheet" href="D:\Users\Marcelo\Desktop\landing page marselo\imagens">
+    <link rel="shortcut icon" href="/imagens/pokemongo_icon-removebg-preview.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="pokedexpage.css">
+    
+    <title>Pokédex</title>
+</head>
+<body>    
+    <div id="filter"></div>
+
+    <div class="container">
+        <h1>Consulte sua Pokédex!</h1>
+        <form id="pokedexForm">
+            <div id="input_group">
+                <input type="text" id="name_number" name="pokemon" placeholder="Digite o nome ou número">
+                <button type="submit">GO!</button>
+            </div>
+        </form>
+    </div>
+    
+    <br>
+
+    <h2>Tabela de Tipagem Pokémon!</h2>
+    <table id="tabela-fraquezas">
+        <tr class="tr1">
+            <th class="tabela-tipo-main">TIPO</th>
+            <th class="tabela-fraqueza-main">FRAQUEZA</th>
+            <th class="tabela-resistencia-main">RESISTÊNCIA</th>
+        </tr>
+        <tr class="tr2">
+            <td class="tabela-tipo2">Fogo</td>
+            <td class="tabela-fraqueza2">Água, Rocha, Terra</td>
+            <td class="tabela-resistencia2">Inseto, Planta, Gelo, Fogo</td>
+        </tr>
+        <tr class="tr3">
+            <td class="tabela-tipo3">Água</td>
+            <td class="tabela-fraqueza3">Elétrico, Planta</td>
+            <td class="tabela-resistencia3">Fogo, Água, Gelo, Aço</td>
+        </tr>
+        <tr class="tr4">
+            <td class="tabela-tipo4">Elétrico</td>
+            <td class="tabela-fraqueza4">Terra</td>
+            <td class="tabela-resistencia4">Elétrico, Aço, Voador</td>
+        </tr>
+        <tr class="tr5">
+            <td class="tabela-tipo5">Planta</td>
+            <td class="tabela-fraqueza5">Fogo, Gelo, Voador, Inseto</td>
+            <td class="tabela-resistencia5">Água, Planta, Elétrico, Terra</td>
+        </tr>
+        <tr class="tr6">
+            <td class="tabela-tipo6">Terra</td>
+            <td class="tabela-fraqueza6">Água, Gelo, Planta</td>
+            <td class="tabela-resistencia6">Elétrico, Veneno, Pedra</td>
+        </tr>
+        <tr class="fim-tabela">
+            <th class="tabela-tipo-main"></th>
+            <th class="tabela-fraqueza-main"></th>
+            <th class="tabela-resistencia-main"></th>
+        </tr>
+    </table>
+
+    <script>
+        document.getElementById("pokedexForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const pokemon = document.getElementById("name_number").value.trim().toLowerCase();
+            if (pokemon) {
+                const url = `https://www.pokemon.com/br/pokedex/${pokemon}`;
+                window.location.href = url;
+            }else{
+                alert("Por favor, digite o nome ou número do Pokémon.");
+            }
+});
+    </script>
+</body>
+</html>

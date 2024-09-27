@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+    --color-neutral-0: #0e0c0c;
+    --color-neutral-10: #171717;
+    --color-neutral-30: #a8a29e;
+    --color-neutral-40: #f5f5f5;
+    --color-purple: #7f37c9;
+}
+
+body{
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url(/imagens/pencil-plus1-pokemon_1920x1080.jpg) no-repeat center center fixed; 
+    background-size: cover;
+}
+
+#filter{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.container {
+    background-color: var(--color-neutral-0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 10vh;
+    width: 90%;
+    max-width: 400px;
+    height: 400px;
+    border: none;
+    border-radius: 20px;
+    position: relative;
+    z-index: 2;
+    color: var(--color-neutral-40);
+    text-align: center; 
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+        height: auto;
+        margin-top: 20vh;
+    }
+
+    input[type="text"] {
+        width: 200px;
+    }
+}
+
+h1{
+    margin-bottom: 20px;
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+#input_group{
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    width: 240px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px 0px 0px 8px;
+    border: 2px solid var(--color-purple);
+    background-color: transparent;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #7f37c9;
+    box-shadow: 0 0 10px rgba(127, 55, 201, 0.5);
+    color: var(--color-neutral-40);
+}
+
+button[type="submit"] {
+    border: 2px solid #7f37c9;
+    background-color: var(--color-neutral-0);
+    border-radius: 0px 8px 8px 0px;
+}
+
+#input_group button{
+    background-color: #7f37c9;
+    border: none;
+    color: var(--color-neutral-40);
+    padding: 10px 1.25rem;
+    font-size: 1.125rem;
+    font-weight: bold;
+    height: 100%;
+    cursor: pointer;
+    transition: all 0.4s;
+}
+
+#input_group button:hover{
+    opacity: 0.8;
+}
+
+h2{
+    text-align: center;
+    color: var(--color-neutral-40);
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #8d6e63;
+    position: relative;
+    z-index: 2;
+}
+
+#tabela-fraquezas{
+    width: 80%;
+    position: relative;
+    z-index: 2;
+    border-radius: 20px;
+    border-spacing: 0;
+    overflow: hidden;
+    margin-left: 200px;
+    margin-bottom: 100px;
+}
+
+th{
+    padding: 20px;
+    font-size: 1.25rem;
+}
+
+.tabela-tipo-main{
+    background-color: var(--color-purple);
+    font-weight: bold;
+    color: var(--color-neutral-40);
+}
+
+.tabela-tipo2{
+    background-color: #ff9807;
+    color: var(--color-neutral-0);
+    font-weight: bold;
+    padding: 20px;
+}
+
+.tabela-tipo3{
+    background-color: #2196f3;
+    color: var(--color-neutral-0);
+    font-weight: bold;
+    padding: 20px;
+}
+
+.tabela-tipo4{
+    background-color: #ffff67;
+    color: var(--color-neutral-0);
+    font-weight: bold;
+    padding: 20px;
+}
+
+.tabela-tipo5{
+    background-color: #4caf50;
+    color: var(--color-neutral-0);
+    font-weight: bold;
+    padding: 20px;
+}
+
+.tabela-tipo6{
+    background-color: #6d4c41;
+    color: var(--color-neutral-0);
+    font-weight: bold;
+    padding: 20px;
+}
+
+.tabela-fraqueza-main{
+    background-color: var(--color-purple);
+    font-weight: bold;
+    color: var(--color-neutral-40);
+}
+
+.tabela-fraqueza2{
+    background-color: var(--color-neutral-30);
+    color: var(--color-neutral-0);
+    font-weight: bold;
+}
+
+.tabela-fraqueza3{
+    background-color: var(--color-neutral-30);
+    color: var(--color-neutral-0);
+    font-weight: bold;
+
+}
+
+.tabela-fraqueza4{
+    background-color: var(--color-neutral-30);
+    color: var(--color-neutral-0);
+    font-weight: bold;
+}
+
+.tabela-fraqueza5{
+    background-color: var(--color-neutral-30);
+    color: var(--color-neutral-0);
+    font-weight: bold;
+}
+
+.tabela-fraqueza6{
+    background-color: var(--color-neutral-30);
+    color: var(--color-neutral-0);
+    font-weight: bold;
+}
+
+.tabela-resistencia-main{
+    background-color: var(--color-purple);
+    font-weight: bold;
+    color: var(--color-neutral-40);
+}
+
+.tabela-resistencia2{
+    background-color: var(--color-neutral-30);
+    color: var(--color-neutral-0);
+    font-weight: bold;
+    padding: 15px;
+}
+
+.tabela-resistencia3{
+    background-color: var(--color-neutral-30);
+    color: var(--color-neutral-0);
+    font-weight: bold;
+    padding: 15px;
+}
+
+.tabela-resistencia4{
+    background-color: var(--color-neutral-30);
+    color: var(--color-neutral-0);
+    font-weight: bold;
+    padding: 15px;
+}
+
+.tabela-resistencia5{
+    background-color: var(--color-neutral-30);
+    color: var(--color-neutral-0);
+    font-weight: bold;
+    padding: 15px;
+}
+
+.tabela-resistencia6{
+    background-color: var(--color-neutral-30);
+    color: var(--color-neutral-0);
+    font-weight: bold;
+    padding: 15px;
+}
+
+.fim-tabela{
+    padding: 30px;
+}
+table, th, td{
+    border: 2px solid var(--color-neutral-0);
+}
+
+th, td{
+    text-align: center;
+}
